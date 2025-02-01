@@ -294,7 +294,7 @@ export default function Header() {
         </motion.div>
       </div>
 
-      {/* Video Modal */}
+      {/* Video Modal with Full Screen Video */}
       <AnimatePresence>
         {showVideo && (
           <motion.div
@@ -304,33 +304,26 @@ export default function Header() {
             exit={{ opacity: 0 }}
             onClick={closeVideo} // Clicking the overlay closes the modal
           >
-            <motion.div
-              className="relative w-full h-full max-w-4xl max-h-[calc(100vh-4rem)]"
+            <motion.button
+              className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 z-50"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeVideo();
+              }}
+              aria-label="Close Video"
+            >
+              &times;
+            </motion.button>
+            <motion.video
+              autoPlay
+              controls
+              src="/path-to-your-video.mp4" // Replace with your video file path
+              className="w-full h-full object-contain"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside the video container
-            >
-              <button
-                className="absolute top-4 right-4 text-white text-3xl font-bold z-10 hover:text-gray-300"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setShowVideo(false);
-                }}
-                aria-label="Close Video"
-              >
-                &times;
-              </button>
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="AI Agents Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </motion.div>
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the video
+            />
           </motion.div>
         )}
       </AnimatePresence>
