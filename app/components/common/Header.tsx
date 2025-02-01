@@ -474,17 +474,19 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeVideo} // Clicking the overlay closes the modal
-          > {/* Close Icon */}
-          <motion.button
-            className="absolute top-4 right-4 text-white text-3xl z-50 hover:text-gray-300"
-            onClick={(e) => {
-              e.stopPropagation();
-              closeVideo();
-            }}
-            aria-label="Close Video"
           >
-            <AiOutlineClose />
-          </motion.button>
+            {" "}
+            {/* Close Icon */}
+            <motion.button
+              className="absolute top-4 right-4 text-white text-3xl z-50 hover:text-gray-300"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeVideo();
+              }}
+              aria-label="Close Video"
+            >
+              <AiOutlineClose />
+            </motion.button>
             <motion.div
               className="relative bg-black bg-opacity-80 rounded-xl overflow-hidden"
               style={{ width: "80%", height: "80%" }}
@@ -493,7 +495,6 @@ export default function Header() {
               exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the video container
             >
-             
               <motion.video
                 autoPlay
                 controls
@@ -507,7 +508,7 @@ export default function Header() {
 
       {/* Enhanced Custom Cursor */}
       <motion.div
-        className="fixed z-50 pointer-events-none flex flex-col items-center justify-center"
+        className="fixed z-50 sm:flex hidden pointer-events-none  flex-col items-center justify-center"
         animate={{
           x: mousePosition.x,
           y: mousePosition.y,
