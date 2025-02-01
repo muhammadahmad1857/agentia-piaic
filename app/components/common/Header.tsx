@@ -469,12 +469,22 @@ export default function Header() {
       <AnimatePresence>
         {showVideo && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeVideo} // Clicking the overlay closes the modal
+          > {/* Close Icon */}
+          <motion.button
+            className="absolute top-4 right-4 text-white text-3xl z-50 hover:text-gray-300"
+            onClick={(e) => {
+              e.stopPropagation();
+              closeVideo();
+            }}
+            aria-label="Close Video"
           >
+            <AiOutlineClose />
+          </motion.button>
             <motion.div
               className="relative bg-black bg-opacity-80 rounded-xl overflow-hidden"
               style={{ width: "80%", height: "80%" }}
@@ -483,17 +493,7 @@ export default function Header() {
               exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the video container
             >
-              {/* Close Icon */}
-              <motion.button
-                className="absolute top-4 right-4 text-white text-3xl z-50 hover:text-gray-300"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  closeVideo();
-                }}
-                aria-label="Close Video"
-              >
-                <AiOutlineClose />
-              </motion.button>
+             
               <motion.video
                 autoPlay
                 controls
