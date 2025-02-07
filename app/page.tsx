@@ -1,7 +1,10 @@
-import Header from "@/app/components/common/Header";
+"use client";
+import Navbar from "./components/common/Navbar";
 
 export default function Home() {
   return (
-    <Header/>
+    <main>
+      <Navbar />
+    </main>
   );
 }
