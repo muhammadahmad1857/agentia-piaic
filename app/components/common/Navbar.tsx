@@ -101,7 +101,7 @@ const Navbar = () => {
       border border-solid border-transparent rounded-xl 
       flex items-center justify-center aspect-square cursor-pointer 
       scale-[0.75]
-      transition-transform duration-200 active:scale-[0.70]
+      transition-transform duration-200 group-active:scale-[0.70]
       [box-shadow:#3c40434d_0_1px_2px_0,#3c404326_0_2px_6px_2px,#0000004d_0_30px_60px_-30px,#34343459_0_-2px_6px_0_inset]"
           >
             <svg
