@@ -94,19 +94,20 @@ const Navbar = () => {
           <button
             type="button"
             className="relative outline-0 
-      bg-[linear-gradient(45deg,#7CFc00,#ADFF2F)]
+      bg-[linear-gradient(45deg,#f4faf2,#ffffff)]
       [--sz-btn:68px] [--space:calc(var(--sz-btn)/5.5)] [--gen-sz:calc(var(--space)*2)]
       [--sz-text:calc(var(--sz-btn)-var(--gen-sz))]
       h-[var(--sz-btn)] w-[var(--sz-btn)]
       border border-solid border-transparent rounded-xl 
       flex items-center justify-center aspect-square cursor-pointer 
-      transition-transform duration-200 active:scale-[0.95]
+      scale-[0.75]
+      transition-transform duration-200 active:scale-[0.70]
       [box-shadow:#3c40434d_0_1px_2px_0,#3c404326_0_2px_6px_2px,#0000004d_0_30px_60px_-30px,#34343459_0_-2px_6px_0_inset]"
           >
             <svg
               className="group-hover:animate-pulse absolute z-10 overflow-visible 
-        transition-all duration-500 text-white
-        group-hover:text-white-theme
+        transition-all duration-500 text-black-theme
+        group-hover:text-black
         top-[calc(var(--sz-text)/7)] left-[calc(var(--sz-text)/7)]
         h-[var(--gen-sz)] w-[var(--gen-sz)]
         group-hover:h-[var(--sz-text)] group-hover:w-[var(--sz-text)]
@@ -124,7 +125,7 @@ const Navbar = () => {
 
             <span
               className="z-20 [font-size:var(--sz-text)] font-extrabold leading-none 
-        text-white-theme transition-all duration-200 group-hover:opacity-0"
+        text-black-theme transition-all duration-200 group-hover:opacity-0"
             >
               AI
             </span>
