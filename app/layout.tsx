@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
 
 const sora = Sora({
-  weight: ["100","400"],
+  weight: ["100", "400"],
   subsets: ["latin"],
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,9 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.className}antialiased`}
+        className={`${sora.className} max-w-screen-2xl mx-auto  antialiased bg-[#0a0a0a] text-white`}
       >
-        {children}
+        <main className="min-h-screen">
+          <Navbar />
+          {children}
+        </main>
+
+        <Footer />
       </body>
     </html>
   );

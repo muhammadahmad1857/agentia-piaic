@@ -1,10 +1,11 @@
-"use client";
-import Navbar from "./components/common/Navbar";
+import CTA from "@/components/home/CTA";
+import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Hero />
+      <CTA />
     </main>
   );
 }
