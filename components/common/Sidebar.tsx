@@ -132,7 +132,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, links, setIsOpen }) => {
         ease: "easeInOut",
         delay: isOpen ? 0 : 0.4,
       }}
-      className="fixed md:hidden min-w-full top-0 z-30 min-h-screen backdrop-blur-2xl bg-black/50"
+      className="fixed md:hidden min-w-full top-0 z-[400] min-h-screen backdrop-blur-2xl bg-black/50"
     >
       <div className="absolute top-[96px] left-0 w-full px-4 flex flex-col items-center">
         <motion.div

@@ -14,7 +14,7 @@ const Navbar = () => {
     },
     {
       label: "Pillars",
-      href: "#core-pillars",
+      href: "#pillars",
     },
     {
       label: "how it works",

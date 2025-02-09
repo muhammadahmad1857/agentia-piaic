@@ -22,7 +22,7 @@ const CTA = () => {
     console.log("submitted");
   };
   return (
-    <div id="cta" className="mt-10">
+    <div id="cta" className="mt-2 sm:mt-10">
       <LampContainer>
         <motion.div
           initial={{ opacity: 0, y: 50 }}

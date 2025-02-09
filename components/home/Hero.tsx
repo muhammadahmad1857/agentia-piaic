@@ -20,9 +20,9 @@ const Hero = () => {
           delay={200}
           animateBy="words"
           direction="top"
-          className="sm:text-[18px] font-medium mt-5"
+          className="sm:text-[18px] px-2 text-center font-medium mt-5"
         />
-        <div className="flex gap-10 mt-8">
+        <div className="flex gap-4 sm:gap-10 mt-8 sm:flex-row flex-col">
           <Button>Join Beta</Button>
           <Button className="border-black-theme capitalize">
             Watch the keynote
