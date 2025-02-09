@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
-      className="bg-black-theme text-white py-8 border-t border-gray-800"
+      className=" text-white overflow-hidden py-8 border-t border-gray-800"
     >
       <div className=" px-4 flex flex-col md:flex-row md:items-center justify-center gap-10 md:justify-between">
         {/* Left Section: Logo & Navigation Links */}
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
         </div>
         <SocialLinksBar />
       </div>
-      <div className="w-full h-0.5 bg-white my-4"></div>{" "}
+      <div className="w-full h-[1px] bg-white my-4"></div>{" "}
       <p className="text-center">
         &copy; {new Date().getFullYear()} All rights reserved.
       </p>

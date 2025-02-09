@@ -5,9 +5,38 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+  font-family: 'Technor'; /* Same font family name for both weights */
+  src: local('Technor-Semibold'), url('../public/fonts/Technor-Semibold.ttf') format('truetype');
+  font-weight: 600; 
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Technor Bold */
+@font-face {
+  font-family: 'Technor'; 
+  src: local('Technor-Bold'), url('../public/fonts/Technor-Bold.ttf') format('truetype');
+  font-weight: bold; 
+  font-style: normal;
+  font-display: swap;
+}
+/* .bg-gradient {
+  background: linear-gradient(#F5F4F8, #0a0a0a) padding-box,
+              conic-gradient(from 45deg, #F5F4F8) border-box;
+} */
+
 
 @layer base {
   :root {
+    --color-violet-400: theme('colors.violet.400');
+    --color-fuchsia-400: theme('colors.fuchsia.400');
+    --color-fuchsia-900: theme('colors.fuchsia.900');
+    --color-amber-300: theme('colors.amber.300');
+    --color-teal-300: theme('colors.teal.300');
+    --color-gray-950: theme('colors.gray.950');
+    --color-indigo-900: theme('colors.indigo.900');
+    --color-border: theme('colors.gray.200/20%');
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -66,7 +95,32 @@ body {
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+::selection{
+  background-color: gray;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

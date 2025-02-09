@@ -85,7 +85,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({
   // Get platform-specific gradient classes and default icon.
   const style = platformStyles[platform];
   const mergedClasses = twMerge(
-    `group w-12 hover:w-44 h-12 relative rounded-xl text-neutral-50 duration-700
+    `group size-10 hover:w-44 relative rounded-xl text-neutral-50 duration-700
      ${style.gradient} ${style.hoverGradient} font-bold flex justify-start gap-2 items-center p-2 pr-6
      before:duration-700 before:transition-all before:absolute before:-z-10 before:left-8 before:w-6 before:h-6 
      ${style.gradient} before:rotate-45 hover:before:left-40`,
@@ -93,7 +93,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({
   );
   return (
     <Link href={finalHref} className={mergedClasses}>
-      {icon ? icon : <style.Icon className="w-8 h-8 shrink-0" />}
+      {icon ? icon : <style.Icon className="size-6 shrink-0" />}
       <span
         className="
           origin-left inline-flex duration-100 group-hover:duration-300 group-hover:delay-500 

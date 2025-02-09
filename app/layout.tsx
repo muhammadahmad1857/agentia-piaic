@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 
-const sora = Sora({
-  weight: ["100", "400"],
+const montserrat = Montserrat({
+  weight: ["100","200","300","400","500","600"],
   subsets: ["latin"],
 });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.className} max-w-screen-2xl mx-auto  antialiased bg-[#0a0a0a] text-white`}
+        className={`${montserrat.className} max-w-screen-2xl mx-auto  antialiased bg-[#0a0a0a] text-white`}
       >
         <main className="min-h-screen">
           <Navbar />
