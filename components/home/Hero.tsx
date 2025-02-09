@@ -13,14 +13,14 @@ const Hero = () => {
           delay={200}
           animateBy="words"
           direction="top"
-          className="sm:text-7xl font-technor  text-4xl font-bold capitalize"
+          className="heading text-center"
         />
         <BlurText
           text="A world where AI agents work, think and evolve together."
           delay={200}
           animateBy="words"
           direction="top"
-          className="sm:text-[18px] px-2 text-center font-medium mt-5"
+          className="para text-center px-2 "
         />
         <div className="flex gap-4 sm:gap-10 mt-8 sm:flex-row flex-col">
           <Button>Join Beta</Button>

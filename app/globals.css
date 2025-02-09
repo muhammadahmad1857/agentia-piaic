@@ -99,6 +99,12 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  .heading{
+   @apply sm:text-7xl font-technor  text-4xl font-bold capitalize
+  }
+  .para{
+    @apply sm:text-[18px]  font-medium mt-5
+  }
 }
 
 
