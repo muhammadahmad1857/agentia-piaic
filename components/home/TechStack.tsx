@@ -1,70 +1,40 @@
 "use client";
 import React from "react";
 import RevealScroll from "../animations/RevealScroll";
-import InfiniteMenu from "./tech-menu";
-import { FaGithub, FaPython, FaReact } from "react-icons/fa";
-
+import { FaCheckCircle, } from "react-icons/fa";
+import Button from "../common/Button";
+import Link from "next/link";
+import {OrbitLogos} from "./OrbitLogos"
 const TechStack = () => {
-  const items = [
-    {
-      icon: FaGithub,
-      link: "https://www.langchain.com/langgraph",
-      title: "Langraph",
-      description: "Visualizes and manages language models.",
-    },
-    {
-      icon: FaGithub,
-      link: "https://langchain.com",
-      title: "LangChain",
-      description: "Framework for language model apps.",
-    },
-    {
-      icon: FaReact,
-      link: "https://react.dev",
-      title: "React",
-      description: "Interactive UI JavaScript library.",
-    },
-    {
-      icon: FaReact,
-      link: "https://nextjs.org",
-      title: "Next.js",
-      description: "React framework for hybrid rendering.",
-    },
-    {
-      icon: FaReact,
-      link: "https://crewai.com",
-      title: "Crew AI",
-      description: "AI-powered team collaboration automation.",
-    },
-    {
-      icon: FaGithub,
-      link: "https://github.com",
-      title: "GitHub",
-      description: "Collaborative version control platform.",
-    },
-    {
-      icon: FaGithub,
-      link: "https://fastapi.tiangolo.com",
-      title: "FastAPI",
-      description: "High-performance Python API framework.",
-    },
-    {
-      icon: FaPython,
-      link: "https://www.python.org",
-      title: "Python",
-      description: "Versatile, high-level programming language.",
-    },
+ 
+  const benefits = [
+    "Effortless integration",
+    "Intelligent automation",
+    "Robust security",
   ];
 
   return (
     <RevealScroll>
       <div id="tech" className=" p-4 md:p-8">
-        <h1 className="heading text-4xl">Powered by Next-Gen tech</h1>
-        <p className="para mb-10 px-0">
-          Agentic Frameworks, Knowledge Graphs, Decenteralized Ledgers, NLP-
-          Centric Protocols, and simulated societies driven innovation.{" "}
-        </p>
-        <InfiniteMenu items={items} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+              <div>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-technor font-semibold text-gray-200 leading-tight">
+                  Technologies we use to empower your bussiness
+                </h2>
+                <ul className="mt-12 flex flex-col gap-8">
+                  {benefits.map((benefit) => (
+                    <li key={benefit} className="flex items-center gap-4">
+                      <FaCheckCircle color="white"/>
+                      <span className="text-xl font-medium">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link href={"#cta"}>
+                  <Button className="mt-16">Join Beta</Button>
+                </Link>
+              </div>
+              <OrbitLogos/>
+      </div>
       </div>
     </RevealScroll>
   );

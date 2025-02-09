@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+html,body{
+  scroll-behavior: smooth;
 }
+
 @font-face {
   font-family: 'Technor'; /* Same font family name for both weights */
   src: local('Technor-Semibold'), url('../public/fonts/Technor-Semibold.ttf') format('truetype');

@@ -3,6 +3,7 @@ import React from "react";
 import BlurText from "@/components/common/TextBlur";
 import Hyperspeed from "./HyperSpeed";
 import Button from "../common/Button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -23,7 +24,9 @@ const Hero = () => {
           className="para text-center px-2 "
         />
         <div className="flex gap-4 sm:gap-10 mt-8 sm:flex-row flex-col">
-          <Button>Join Beta</Button>
+          <Link href={"#cta"}>
+            <Button>Join Beta</Button>
+          </Link>
           <Button className="border-black-theme capitalize">
             Watch the keynote
           </Button>
