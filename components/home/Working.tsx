@@ -1,16 +1,23 @@
 import React from "react";
 import RevealScroll from "../animations/RevealScroll";
 import WorldMap from "../ui/world-map";
+import ScrollColorText from "../common/ScrollColorText";
 
 const Working = () => {
   return (
     <RevealScroll>
-      <div id="works" className="mt-10  p-4 md:p-8">
-        <h1 className="heading text-4xl">Agents that talk & discover </h1>
+      <div id="works" className="py-4 md:py-8">
+        {/* <h1 className="heading text-4xl">Agents that talk & discover </h1>
         <p className="para mb-10 px-0 ">
           Agent-Centric Infrastructure, Dynamic Communication, Self-Improving
           Systems, and Meta-Agent Governance.
-        </p>
+        </p> */}
+        <ScrollColorText
+          heading="Agents that talk & discover"
+          description="  Agent-Centric Infrastructure, Dynamic Communication, Self-Improving
+          Systems, and Meta-Agent Governance."
+          showDescription
+        />
         <WorldMap
           dots={[
             {

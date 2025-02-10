@@ -1,12 +1,13 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 const RevealScroll = ({ children }: { children: React.ReactNode }) => {
   const variants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, scale: 0.5 },
     visible: {
       opacity: 1,
-      y: 0,
+      scale: 1,
+    
       transition: { duration: 0.8, ease: "easeOut" },
     },
   };

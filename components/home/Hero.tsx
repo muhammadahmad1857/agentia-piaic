@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center gap-4 px-4 min-h-screen text-white">
+    <div className="relative flex flex-col items-center justify-center gap-4 min-w-full min-h-screen 2xl:border-white 2xl:border text-white">
       <div className="absolute top-[30%] w-full flex flex-col items-center justify-center z-50">
         <BlurText
           text="Agentia World"
