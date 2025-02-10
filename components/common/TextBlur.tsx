@@ -109,12 +109,9 @@ const BlurText: React.FC<BlurTextProps> = ({
     }))
   );
 
-  // === FIX ===
-  // Cast the animated.span to a React functional component with the full span attributes.
-  const AnimatedSpan = animated?.span as unknown as React.FC<
-    React.HTMLAttributes<HTMLSpanElement> & { style?: any }
-  >;
-  // ===========
+  const AnimatedSpan = animated("span") as unknown as React.FC<
+  React.HTMLAttributes<HTMLSpanElement> & { style?: any }
+>;
 
   return (
     <p ref={ref} className={`blur-text ${className} flex flex-wrap`}>
